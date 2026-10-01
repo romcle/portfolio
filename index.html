@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio : projets, compétences et contact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="#haut" data-profil="nom"></a>
+      <nav class="nav__links">
+        <a href="#a-propos">À propos</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="haut">
+    <!-- ACCUEIL -->
+    <section class="hero container">
+      <img class="hero__photo" alt="" hidden>
+      <div>
+        <p class="hero__eyebrow" data-profil="titre"></p>
+        <h1 class="hero__title">Bonjour, je suis <span data-profil="nom"></span>.</h1>
+        <p class="hero__lead" data-profil="accroche"></p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projets">Voir mes projets</a>
+          <a class="btn" id="hero-cv" href="#" target="_blank" rel="noopener" hidden>Télécharger mon CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- À PROPOS -->
+    <section id="a-propos" class="section container">
+      <h2 class="section__title">À propos</h2>
+      <div class="about">
+        <div class="about__text" id="about-text"></div>
+        <div class="about__skills" id="skills"></div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section container">
+      <h2 class="section__title">Projets</h2>
+      <div class="filters" id="filters" role="toolbar" aria-label="Filtrer les projets"></div>
+      <div class="grid" id="projects-grid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section__title">Contact</h2>
+      <p class="muted">Une question, une opportunité de stage ? N'hésite pas à me contacter.</p>
+      <div class="contact" id="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> <span data-profil="nom"></span></p>
+  </footer>
+
+  <script src="data/profil.js"></script>
+  <script src="data/projets.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

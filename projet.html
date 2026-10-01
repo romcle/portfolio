@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Cette page est générée automatiquement à partir de data/projets.js.
+       Tu n'as pas besoin de la modifier pour ajouter un projet. -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="nav__logo" href="index.html" data-profil="nom"></a>
+      <nav class="nav__links">
+        <a href="index.html#projets">← Tous les projets</a>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container project" id="project"></main>
+
+  <footer class="footer container">
+    <p class="muted">© <span id="year"></span> <span data-profil="nom"></span></p>
+  </footer>
+
+  <script src="data/profil.js"></script>
+  <script src="data/projets.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
