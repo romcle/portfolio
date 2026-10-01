@@ -14,7 +14,8 @@ portfolio/
 ├── assets/
 │   ├── css/style.css       Styles (change --accent pour la couleur principale)
 │   ├── js/main.js          Logique d'affichage
-│   └── img/projets/        Images de tes projets (un dossier par projet)
+│   ├── img/projets/        Images de tes projets (un dossier par projet)
+│   └── cv/                 Ton CV en PDF
 └── AJOUTER-UN-PROJET.md    📘 Guide pas à pas pour ajouter un projet
 ```
 

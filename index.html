@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
-  <meta name="description" content="Portfolio : projets, compétences et contact.">
+  <meta name="description" content="Portfolio of Romain Clerc, Robotics &amp; Mechatronics engineering student at SeaTech.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
     <div class="container nav__inner">
       <a class="nav__logo" href="#haut" data-profil="nom"></a>
       <nav class="nav__links">
-        <a href="#a-propos">À propos</a>
-        <a href="#projets">Projets</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Changer de thème">◐</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">◐</button>
       </nav>
     </div>
   </header>
@@ -28,36 +28,46 @@
     <section class="hero container">
       <img class="hero__photo" alt="" hidden>
       <div>
+        <p class="availability" id="availability" hidden></p>
         <p class="hero__eyebrow" data-profil="titre"></p>
-        <h1 class="hero__title">Bonjour, je suis <span data-profil="nom"></span>.</h1>
+        <h1 class="hero__title">Hi, I'm <span data-profil="nom"></span>.</h1>
         <p class="hero__lead" data-profil="accroche"></p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#projets">Voir mes projets</a>
-          <a class="btn" id="hero-cv" href="#" target="_blank" rel="noopener" hidden>Télécharger mon CV</a>
+          <a class="btn btn--primary" href="#projects">See my projects</a>
+          <a class="btn" id="hero-cv" href="#" target="_blank" rel="noopener" hidden>Download my resume</a>
         </div>
       </div>
     </section>
 
     <!-- À PROPOS -->
-    <section id="a-propos" class="section container">
-      <h2 class="section__title">À propos</h2>
+    <section id="about" class="section container">
+      <h2 class="section__title">About</h2>
       <div class="about">
-        <div class="about__text" id="about-text"></div>
+        <div>
+          <div class="about__text" id="about-text"></div>
+          <div id="interests"></div>
+        </div>
         <div class="about__skills" id="skills"></div>
       </div>
     </section>
 
+    <!-- PARCOURS -->
+    <section id="background" class="section container">
+      <h2 class="section__title">Background</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
     <!-- PROJETS -->
-    <section id="projets" class="section container">
-      <h2 class="section__title">Projets</h2>
-      <div class="filters" id="filters" role="toolbar" aria-label="Filtrer les projets"></div>
+    <section id="projects" class="section container">
+      <h2 class="section__title">Projects</h2>
+      <div class="filters" id="filters" role="toolbar" aria-label="Filter projects"></div>
       <div class="grid" id="projects-grid"></div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section container">
       <h2 class="section__title">Contact</h2>
-      <p class="muted">Une question, une opportunité de stage ? N'hésite pas à me contacter.</p>
+      <p class="muted">Have an internship opportunity or a question? Feel free to reach out.</p>
       <div class="contact" id="contact-links"></div>
     </section>
   </main>

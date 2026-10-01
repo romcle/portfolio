@@ -10,7 +10,7 @@ Crée un dossier au nom de ton projet dans `assets/img/projets/` :
 ```
 assets/img/projets/
 └── robot-suiveur/
-    ├── couverture.jpg   ← image de la carte (format paysage, ~1600×900)
+    ├── cover.jpg   ← image de la carte (format paysage, ~1600×900)
     ├── photo1.jpg
     └── photo2.jpg
 ```
@@ -24,32 +24,35 @@ Ouvre `data/projets.js`, copie ce bloc et colle-le **juste après** `window.PROJ
 ```js
   {
     id: "robot-suiveur",
-    titre: "Robot suiveur de ligne",
-    resume: "Un robot autonome capable de suivre une ligne noire à 1 m/s.",
+    titre: "Line-following robot",
+    resume: "An autonomous robot that follows a black line at 1 m/s.",
     date: "2026-05",
-    contexte: "Projet d'école",
-    tags: ["C", "Arduino", "Électronique"],
-    image: "assets/img/projets/robot-suiveur/couverture.jpg",
+    periode: "",
+    contexte: "School project",
+    tags: ["C", "Arduino", "Electronics"],
+    image: "assets/img/projets/robot-suiveur/cover.jpg",
     enAvant: false,
 
-    role: "Programmation du microcontrôleur et réglage du PID.",
-    equipe: "3 personnes",
-    duree: "2 mois",
+    role: "Microcontroller programming and PID tuning.",
+    equipe: "Team of 3",
+    duree: "2 months",
     sections: [
-      { titre: "Contexte", texte: "..." },
-      { titre: "Ce que j'ai fait", texte: "..." },
-      { titre: "Résultats", texte: "..." },
+      { titre: "Context", texte: "..." },
+      { titre: "What I did", texte: "..." },
+      { titre: "Results", texte: "..." },
     ],
     galerie: [
-      { src: "assets/img/projets/robot-suiveur/photo1.jpg", legende: "Le prototype final" },
+      { src: "assets/img/projets/robot-suiveur/photo1.jpg", legende: "The final prototype" },
     ],
     liens: [
-      { label: "Code source", url: "https://github.com/romcle/robot-suiveur" },
+      { label: "Source code", url: "https://github.com/romcle/robot-suiveur" },
     ],
   },
 ```
 
 ## 3. Les champs expliqués
+
+Le site est en anglais : écris le contenu de tes projets en anglais.
 
 | Champ | Obligatoire | Description |
 |---|---|---|
@@ -57,14 +60,17 @@ Ouvre `data/projets.js`, copie ce bloc et colle-le **juste après** `window.PROJ
 | `titre` | ✅ | Le nom du projet. |
 | `resume` | ✅ | Une phrase affichée sur la carte. |
 | `date` | ✅ | Format `AAAA-MM`. Les projets sont triés du plus récent au plus ancien. |
-| `contexte` | | Projet d'école, Stage, Perso, Hackathon… |
+| `periode` | | Texte affiché à la place de la date, ex. `"2025 – 2026"` ou `"Jun. – Jul. 2026"`. |
+| `contexte` | | School project, Internship, Personal, Hackathon… |
 | `tags` | | Technologies / domaines. Chaque tag devient un **filtre** sur la page d'accueil. |
 | `image` | | Image de couverture. Si vide, un visuel avec les initiales est affiché. |
-| `enAvant` | | `true` pour afficher le badge « ★ À la une ». |
+| `enAvant` | | `true` pour afficher le badge « ★ Featured ». |
 | `role`, `equipe`, `duree` | | Affichés dans l'encadré à droite de la page projet. |
 | `sections` | | Paragraphes de la page projet. Utilise `\n` dans `texte` pour changer de paragraphe. Ajoute autant de sections que tu veux. |
 | `galerie` | | Liste d'images avec légende. |
 | `liens` | | Boutons vers le code, un rapport PDF, une vidéo… |
+
+> 💡 Une section dont le texte commence par **`À COMPLÉTER`** est **masquée** sur le site. Pratique pour préparer un projet petit à petit sans rien publier d'inachevé.
 
 ## 4. Vérifier
 

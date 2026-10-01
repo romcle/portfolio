@@ -108,6 +108,33 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
 .skills__group + .skills__group { margin-top: 20px; }
 .skills__group h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
 
+.subhead { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 28px 0 10px; }
+.interests { margin: 0; padding-left: 1.1em; color: var(--muted); }
+.interests li + li { margin-top: 4px; }
+
+/* ---------- Disponibilité ---------- */
+.availability {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin: 0 0 16px; padding: 6px 14px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-size: 14px; font-weight: 600;
+}
+.availability::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #22c55e 25%, transparent);
+}
+
+/* ---------- Parcours ---------- */
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--border); }
+.timeline__item { position: relative; display: grid; grid-template-columns: 160px 1fr; gap: 16px; padding: 0 0 22px 24px; }
+.timeline__item:last-child { padding-bottom: 0; }
+.timeline__item::before {
+  content: ""; position: absolute; left: -7px; top: 7px;
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent);
+}
+.timeline__when { color: var(--muted); font-size: 15px; }
+.timeline__title { margin: 0; font-weight: 600; }
+.timeline__where { margin: 0; color: var(--muted); font-size: 15px; }
+
 /* ---------- Filtres & grille ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .filter {
@@ -143,7 +170,7 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
 .card__text { color: var(--muted); margin: 0 0 8px; font-size: 15px; flex: 1; }
 
 /* ---------- Contact ---------- */
-.contact { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+.contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 24px; }
 .contact__item {
   display: flex; flex-direction: column; padding: 18px 20px;
   border: 1px solid var(--border); border-radius: var(--radius);
@@ -151,7 +178,7 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
 }
 .contact__item:hover { border-color: var(--accent); }
 .contact__label { font-size: 13px; color: var(--muted); }
-.contact__value { font-weight: 600; overflow-wrap: anywhere; }
+.contact__value { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
 
 /* ---------- Page projet ---------- */
 .project { padding: 56px 0; }
@@ -190,4 +217,5 @@ code { font-size: .9em; background: var(--bg-alt); padding: .1em .35em; border-r
   .about, .project__layout { grid-template-columns: 1fr; gap: 32px; }
   .project__aside { position: static; }
   .grid { grid-template-columns: 1fr; }
+  .timeline__item { grid-template-columns: 1fr; gap: 2px; }
 }
